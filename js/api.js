@@ -3,7 +3,7 @@
 // Save as: js/api.js  (include in every HTML page)
 // ============================================================
 
-const API_URL = 'https://your-backend.onrender.com/api';
+const API_URL = 'https://arena24-backend.onrender.com';
 // Development: const API_URL = 'http://localhost:5000/api';
 
 // ─── Token Management ─────────────────────────────────────────────────────────
