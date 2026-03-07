@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Users — Arena 24 Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <nav class="navbar admin-nav" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <div class="admin-nav-badge">⚙️ Admin Panel</div>
+      <div class="nav-actions"><div class="nav-avatar">👤 Admin</div><a href="login.html" class="btn-ghost">Logout</a></div>
+    </div>
+  </nav>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-title">Admin Menu</div>
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sn-item"><span>🏠</span> Dashboard</a>
+        <a href="admin-tournaments.html" class="sn-item"><span>🏆</span> Tournaments</a>
+        <a href="admin-users.html" class="sn-item active"><span>👥</span> Users</a>
+        <a href="admin-payments.html" class="sn-item"><span>💸</span> Payments</a>
+        <div class="sn-divider"></div>
+        <a href="create-tournament.html" class="sn-item sn-highlight"><span>➕</span> New Tournament</a>
+        <a href="index.html" class="sn-item"><span>🌐</span> View Site</a>
+        <a href="login.html" class="sn-item sn-logout"><span>🚪</span> Logout</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-page-header">
+        <h1>Manage Users</h1>
+        <span class="admin-count-badge">12,408 Total Users</span>
+      </div>
+
+      <!-- STATS -->
+      <div class="admin-stats-row" style="grid-template-columns:repeat(4,1fr)">
+        <div class="admin-stat-card asc-blue"><div class="asc-icon">👥</div><div class="asc-info"><span class="asc-val">12,408</span><span class="asc-label">Total Users</span></div></div>
+        <div class="admin-stat-card asc-green"><div class="asc-icon">✅</div><div class="asc-info"><span class="asc-val">11,980</span><span class="asc-label">Verified</span></div></div>
+        <div class="admin-stat-card asc-orange"><div class="asc-icon">⏳</div><div class="asc-info"><span class="asc-val">428</span><span class="asc-label">Unverified</span></div></div>
+        <div class="admin-stat-card asc-red"><div class="asc-icon">🚫</div><div class="asc-info"><span class="asc-val">14</span><span class="asc-label">Banned</span></div></div>
+      </div>
+
+      <!-- FILTER -->
+      <div class="admin-filter-row">
+        <div class="filter-search">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search username or email..." id="userSearch"/>
+        </div>
+        <select class="filter-select">
+          <option>All Users</option>
+          <option>Verified</option>
+          <option>Unverified</option>
+          <option>Banned</option>
+        </select>
+        <select class="filter-select">
+          <option>All Games</option>
+          <option>BGMI</option>
+          <option>Free Fire</option>
+          <option>Valorant</option>
+          <option>Chess</option>
+        </select>
+      </div>
+
+      <!-- TABLE -->
+      <div class="admin-section">
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>Username</th><th>Email</th><th>Phone</th><th>Joined</th><th>Verified</th><th>Tournaments</th><th>Earnings</th><th>Status</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="at-name">ProSniper_RK</td>
+                <td>prosniper@gmail.com</td>
+                <td>+91 98XXXX1212</td>
+                <td>Dec 1, 2024</td>
+                <td><span class="verified-badge">✅ Yes</span></td>
+                <td>18</td>
+                <td>₹22,500</td>
+                <td><span class="status-active">Active</span></td>
+                <td class="at-actions"><a href="#" class="tbl-btn">View</a><button class="tbl-btn tbl-btn-danger">Ban</button></td>
+              </tr>
+              <tr>
+                <td class="at-name">FlameKing_07</td>
+                <td>flame07@yahoo.com</td>
+                <td>+91 87XXXX3434</td>
+                <td>Dec 3, 2024</td>
+                <td><span class="verified-badge">✅ Yes</span></td>
+                <td>15</td>
+                <td>₹18,000</td>
+                <td><span class="status-active">Active</span></td>
+                <td class="at-actions"><a href="#" class="tbl-btn">View</a><button class="tbl-btn tbl-btn-danger">Ban</button></td>
+              </tr>
+              <tr>
+                <td class="at-name">NightHunter_99</td>
+                <td>nh99@gmail.com</td>
+                <td>+91 96XXXX5656</td>
+                <td>Dec 22, 2024</td>
+                <td><span class="verified-badge">✅ Yes</span></td>
+                <td>4</td>
+                <td>₹1,200</td>
+                <td><span class="status-active">Active</span></td>
+                <td class="at-actions"><a href="#" class="tbl-btn">View</a><button class="tbl-btn tbl-btn-danger">Ban</button></td>
+              </tr>
+              <tr>
+                <td class="at-name">DesertEagle_X</td>
+                <td>dx@outlook.com</td>
+                <td>+91 76XXXX7878</td>
+                <td>Dec 22, 2024</td>
+                <td><span class="unverified-badge">❌ No</span></td>
+                <td>0</td>
+                <td>₹0</td>
+                <td><span class="status-inactive">Inactive</span></td>
+                <td class="at-actions"><a href="#" class="tbl-btn">View</a><button class="tbl-btn">Resend</button></td>
+              </tr>
+              <tr>
+                <td class="at-name">HackAttempt_XYZ</td>
+                <td>hack@fake.com</td>
+                <td>+91 99XXXX0000</td>
+                <td>Dec 10, 2024</td>
+                <td><span class="verified-badge">✅ Yes</span></td>
+                <td>2</td>
+                <td>₹0</td>
+                <td><span class="status-banned">🚫 Banned</span></td>
+                <td class="at-actions"><button class="tbl-btn tbl-btn-success">Unban</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn page-next">Next →</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/global.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

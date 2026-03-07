@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Dashboard — Arena 24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <!-- NAV (logged in state) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <ul class="nav-links">
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="live.html">Live</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+      <div class="nav-actions nav-logged-in">
+        <a href="dashboard.html" class="nav-dashboard-btn active">Dashboard</a>
+        <div class="nav-user-menu" id="userMenu">
+          <div class="nav-avatar" id="avatarBtn">👤 <span>ProSniper_RK</span> ▾</div>
+          <div class="user-dropdown" id="userDropdown">
+            <a href="profile.html">My Profile</a>
+            <a href="dashboard.html">Dashboard</a>
+            <div class="dropdown-divider"></div>
+            <a href="login.html" class="logout-link">Logout</a>
+          </div>
+        </div>
+      </div>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD LAYOUT -->
+  <div class="dash-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar">
+      <div class="sidebar-user">
+        <div class="su-avatar">👤</div>
+        <div class="su-info">
+          <div class="su-name">ProSniper_RK</div>
+          <div class="su-email">prosniper@gmail.com</div>
+          <div class="su-badge">✅ Verified</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sn-item active"><span>🏠</span> Overview</a>
+        <a href="#" class="sn-item"><span>🏆</span> My Tournaments</a>
+        <a href="#" class="sn-item"><span>📊</span> My Stats</a>
+        <a href="#" class="sn-item"><span>💸</span> Earnings & Payments</a>
+        <a href="#" class="sn-item"><span>🔔</span> Notifications <span class="sn-badge">3</span></a>
+        <a href="profile.html" class="sn-item"><span>👤</span> My Profile</a>
+        <div class="sn-divider"></div>
+        <a href="tournaments.html" class="sn-item"><span>🎯</span> Browse Tournaments</a>
+        <a href="login.html" class="sn-item sn-logout"><span>🚪</span> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dash-main">
+
+      <!-- WELCOME -->
+      <div class="dash-welcome">
+        <div>
+          <h1 class="dash-greeting">Welcome back, <span class="accent">ProSniper_RK</span> 🎯</h1>
+          <p class="dash-subtext">You have 2 active tournaments and 1 upcoming match today.</p>
+        </div>
+        <a href="tournaments.html" class="btn-primary">Find New Tournaments</a>
+      </div>
+
+      <!-- STATS ROW -->
+      <div class="dash-stats-row">
+        <div class="dash-stat-card">
+          <div class="dsc-icon">🏆</div>
+          <div class="dsc-info">
+            <span class="dsc-val">18</span>
+            <span class="dsc-label">Tournaments Played</span>
+          </div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dsc-icon">🥇</div>
+          <div class="dsc-info">
+            <span class="dsc-val">9</span>
+            <span class="dsc-label">Wins</span>
+          </div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dsc-icon">💰</div>
+          <div class="dsc-info">
+            <span class="dsc-val">₹22,500</span>
+            <span class="dsc-label">Total Earnings</span>
+          </div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dsc-icon">📈</div>
+          <div class="dsc-info">
+            <span class="dsc-val">#1</span>
+            <span class="dsc-label">Global Rank</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIVE TOURNAMENTS -->
+      <div class="dash-section">
+        <div class="dash-section-header">
+          <h2>Active Tournaments</h2>
+          <a href="#" class="section-link">View All →</a>
+        </div>
+        <div class="active-t-list">
+
+          <div class="active-t-item">
+            <div class="ati-banner" style="background:linear-gradient(135deg,#ff6b00,#ff0040)">🎯</div>
+            <div class="ati-info">
+              <div class="ati-title">BGMI Solo Showdown</div>
+              <div class="ati-meta">
+                <span class="game-tag-sm">BGMI</span>
+                <span class="tag-live"><span class="live-dot"></span> LIVE — Round 2</span>
+              </div>
+              <div class="ati-rank">Your Current Rank: <strong>#1 — 72 pts</strong></div>
+            </div>
+            <div class="ati-actions">
+              <div class="ati-match">📅 Round 3 — Dec 26, 7PM</div>
+              <a href="tournament-detail.html" class="btn-primary btn-sm">View</a>
+            </div>
+          </div>
+
+          <div class="active-t-item">
+            <div class="ati-banner" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">💥</div>
+            <div class="ati-info">
+              <div class="ati-title">COD Sniper Series</div>
+              <div class="ati-meta">
+                <span class="game-tag-sm">COD Mobile</span>
+                <span class="upcoming-badge-sm">Upcoming</span>
+              </div>
+              <div class="ati-rank">Registered · Match starts Jan 1, 2025</div>
+            </div>
+            <div class="ati-actions">
+              <div class="ati-match">📅 Jan 1, 7PM IST</div>
+              <a href="tournament-detail.html" class="btn-outline btn-sm">Details</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- UPCOMING MATCHES -->
+      <div class="dash-section">
+        <div class="dash-section-header">
+          <h2>Today's Matches</h2>
+        </div>
+        <div class="today-match-card">
+          <div class="tmc-left">
+            <div class="tmc-time">7:00 PM IST</div>
+            <div class="tmc-countdown" id="matchCountdown">Loading...</div>
+          </div>
+          <div class="tmc-info">
+            <div class="tmc-name">BGMI Solo Showdown — Round 3</div>
+            <div class="tmc-meta"><span class="game-tag-sm">BGMI</span> · Erangel Map · Leaderboard Format</div>
+            <div class="tmc-room">🔒 Room ID shared 30 min before</div>
+          </div>
+          <div class="tmc-prize">
+            <div>Prize Pool</div>
+            <div class="tmc-prize-amt">₹10,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAYMENT HISTORY -->
+      <div class="dash-section">
+        <div class="dash-section-header">
+          <h2>Payment History</h2>
+          <a href="#" class="section-link">View All →</a>
+        </div>
+        <div class="payment-table">
+          <div class="pt-header"><span>Date</span><span>Tournament</span><span>Type</span><span>Amount</span><span>Status</span></div>
+          <div class="pt-row"><span>Dec 22</span><span>BGMI Solo Showdown</span><span class="ptype-entry">Entry Fee</span><span>-₹100</span><span class="paid-badge">Paid</span></div>
+          <div class="pt-row"><span>Dec 20</span><span>BGMI Solo Series R1</span><span class="ptype-prize">Prize</span><span>+₹4,000</span><span class="received-badge">Received</span></div>
+          <div class="pt-row"><span>Dec 18</span><span>COD Sniper Series</span><span class="ptype-entry">Entry Fee</span><span>-₹50</span><span class="paid-badge">Paid</span></div>
+          <div class="pt-row"><span>Dec 15</span><span>Free Fire Squad Cup</span><span class="ptype-prize">Prize</span><span>+₹2,000</span><span class="received-badge">Received</span></div>
+        </div>
+      </div>
+
+      <!-- NOTIFICATIONS -->
+      <div class="dash-section">
+        <div class="dash-section-header">
+          <h2>Notifications <span class="notif-count">3</span></h2>
+        </div>
+        <div class="notif-list">
+          <div class="notif-item notif-unread">
+            <span class="notif-icon">🎯</span>
+            <div class="notif-body">
+              <div class="notif-title">Round 3 Room Details Ready</div>
+              <div class="notif-sub">BGMI Solo Showdown · Room ID: 123456 · Pass: arena24</div>
+              <div class="notif-time">30 minutes ago</div>
+            </div>
+          </div>
+          <div class="notif-item notif-unread">
+            <span class="notif-icon">🏆</span>
+            <div class="notif-body">
+              <div class="notif-title">You're ranked #1 after Round 2!</div>
+              <div class="notif-sub">BGMI Solo Showdown · Keep it up!</div>
+              <div class="notif-time">2 hours ago</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <span class="notif-icon">💸</span>
+            <div class="notif-body">
+              <div class="notif-title">Prize of ₹4,000 credited</div>
+              <div class="notif-sub">BGMI Solo Series Round 1 · Paid to your UPI</div>
+              <div class="notif-time">2 days ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/global.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

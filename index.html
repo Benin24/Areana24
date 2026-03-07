@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arena 24 — Compete. Conquer. Claim.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-a">A</span>RENA<span class="logo-24">24</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="live.html">Live</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-ghost">Login</a>
+        <a href="register.html" class="btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="tournaments.html">Tournaments</a>
+      <a href="live.html">Live</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="login.html">Login</a>
+      <a href="register.html" class="btn-primary">Register</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="hero-particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>3 Tournaments Live Now</span>
+      </div>
+      <h1 class="hero-title">
+        COMPETE.<br>
+        <span class="title-accent">CONQUER.</span><br>
+        CLAIM.
+      </h1>
+      <p class="hero-sub">India's premier gaming tournament platform. Join thousands of players competing in BGMI, Free Fire, COD, Valorant and more.</p>
+      <div class="hero-cta">
+        <a href="register.html" class="btn-primary btn-xl">Start Competing <span class="btn-arrow">→</span></a>
+        <a href="tournaments.html" class="btn-outline btn-xl">Browse Tournaments</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">12,400+</span>
+          <span class="stat-label">Players</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">₹8.5L+</span>
+          <span class="stat-label">Prize Money</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">340+</span>
+          <span class="stat-label">Tournaments</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="game-cards-stack">
+        <div class="game-card-floating card-1">
+          <div class="gcf-icon">🎯</div>
+          <div class="gcf-info">
+            <span class="gcf-name">BGMI</span>
+            <span class="gcf-players">128 Players</span>
+          </div>
+          <div class="gcf-prize">₹10,000</div>
+        </div>
+        <div class="game-card-floating card-2">
+          <div class="gcf-icon">🔥</div>
+          <div class="gcf-info">
+            <span class="gcf-name">Free Fire</span>
+            <span class="gcf-players">64 Players</span>
+          </div>
+          <div class="gcf-prize">₹5,000</div>
+        </div>
+        <div class="game-card-floating card-3">
+          <div class="gcf-icon">⚡</div>
+          <div class="gcf-info">
+            <span class="gcf-name">Valorant</span>
+            <span class="gcf-players">32 Teams</span>
+          </div>
+          <div class="gcf-prize">₹25,000</div>
+        </div>
+        <div class="pulse-ring"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE TICKER -->
+  <div class="live-ticker">
+    <div class="ticker-label"><span class="live-dot"></span> LIVE</div>
+    <div class="ticker-track">
+      <div class="ticker-inner">
+        <span>🏆 BGMI Solo — Final Round In Progress</span>
+        <span>⚡ Free Fire Squad — Registration Open · ₹500 Entry</span>
+        <span>🎯 COD Mobile — 24 Spots Left</span>
+        <span>🔥 Valorant 5v5 — Starting in 2 Hours</span>
+        <span>🏆 Ludo King Open — FREE Entry · 200 Players Joined</span>
+        <span>⚡ Chess Blitz — Quarterfinals Live Now</span>
+        <span>🏆 BGMI Solo — Final Round In Progress</span>
+        <span>⚡ Free Fire Squad — Registration Open · ₹500 Entry</span>
+        <span>🎯 COD Mobile — 24 Spots Left</span>
+        <span>🔥 Valorant 5v5 — Starting in 2 Hours</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED TOURNAMENTS -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Hot Right Now</div>
+        <h2 class="section-title">Featured Tournaments</h2>
+        <a href="tournaments.html" class="section-link">View All →</a>
+      </div>
+      <div class="tournament-grid">
+
+        <div class="t-card t-card-featured">
+          <div class="t-card-banner" style="background: linear-gradient(135deg, #ff6b00, #ff0040);">
+            <div class="t-game-tag">BGMI</div>
+            <div class="t-live-badge"><span class="live-dot"></span> LIVE</div>
+            <div class="t-banner-icon">🎯</div>
+          </div>
+          <div class="t-card-body">
+            <h3 class="t-title">BGMI Solo Showdown</h3>
+            <div class="t-meta">
+              <span class="t-meta-item">👤 Solo</span>
+              <span class="t-meta-item">📱 Mobile</span>
+              <span class="t-meta-item">🏆 Leaderboard</span>
+            </div>
+            <div class="t-prize-row">
+              <div class="t-prize">
+                <span class="prize-label">Prize Pool</span>
+                <span class="prize-amount">₹10,000</span>
+              </div>
+              <div class="t-entry">
+                <span class="entry-label">Entry Fee</span>
+                <span class="entry-amount entry-paid">₹100</span>
+              </div>
+            </div>
+            <div class="t-progress-row">
+              <span class="t-spots">104/128 Players</span>
+              <div class="t-progress-bar"><div class="t-progress-fill" style="width:81%"></div></div>
+            </div>
+            <a href="tournament-detail.html" class="btn-primary btn-full">View Tournament</a>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card-banner" style="background: linear-gradient(135deg, #00c9a7, #0066ff);">
+            <div class="t-game-tag">Valorant</div>
+            <div class="t-banner-icon">⚡</div>
+          </div>
+          <div class="t-card-body">
+            <h3 class="t-title">Valorant 5v5 Clash</h3>
+            <div class="t-meta">
+              <span class="t-meta-item">👥 Team (5v5)</span>
+              <span class="t-meta-item">💻 PC</span>
+              <span class="t-meta-item">🏅 Bracket</span>
+            </div>
+            <div class="t-prize-row">
+              <div class="t-prize">
+                <span class="prize-label">Prize Pool</span>
+                <span class="prize-amount">₹25,000</span>
+              </div>
+              <div class="t-entry">
+                <span class="entry-label">Entry Fee</span>
+                <span class="entry-amount entry-paid">₹500/team</span>
+              </div>
+            </div>
+            <div class="t-progress-row">
+              <span class="t-spots">12/16 Teams</span>
+              <div class="t-progress-bar"><div class="t-progress-fill" style="width:75%"></div></div>
+            </div>
+            <a href="tournament-detail.html" class="btn-outline btn-full">View Tournament</a>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card-banner" style="background: linear-gradient(135deg, #7b2ff7, #ff6b00);">
+            <div class="t-game-tag">Free Fire</div>
+            <div class="t-banner-icon">🔥</div>
+          </div>
+          <div class="t-card-body">
+            <h3 class="t-title">Free Fire Squad Cup</h3>
+            <div class="t-meta">
+              <span class="t-meta-item">👥 Team (4v4)</span>
+              <span class="t-meta-item">📱 Mobile</span>
+              <span class="t-meta-item">🔄 Round Robin</span>
+            </div>
+            <div class="t-prize-row">
+              <div class="t-prize">
+                <span class="prize-label">Prize Pool</span>
+                <span class="prize-amount">₹8,000</span>
+              </div>
+              <div class="t-entry">
+                <span class="entry-label">Entry Fee</span>
+                <span class="entry-amount entry-free">FREE</span>
+              </div>
+            </div>
+            <div class="t-progress-row">
+              <span class="t-spots">28/32 Teams</span>
+              <div class="t-progress-bar"><div class="t-progress-fill" style="width:87%"></div></div>
+            </div>
+            <a href="tournament-detail.html" class="btn-outline btn-full">View Tournament</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMES WE SUPPORT -->
+  <section class="section games-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Platform</div>
+        <h2 class="section-title">Games We Host</h2>
+      </div>
+      <div class="games-scroll">
+        <div class="games-track">
+          <div class="game-pill active">🎯 BGMI</div>
+          <div class="game-pill">🔥 Free Fire</div>
+          <div class="game-pill">💥 COD Mobile</div>
+          <div class="game-pill">⚡ Valorant</div>
+          <div class="game-pill">🐉 PUBG PC</div>
+          <div class="game-pill">♟️ Chess</div>
+          <div class="game-pill">🎲 Ludo King</div>
+          <div class="game-pill">🏏 Cricket</div>
+          <div class="game-pill">⚽ FIFA Mobile</div>
+          <div class="game-pill">🥊 Tekken</div>
+          <div class="game-pill">🌌 Fortnite</div>
+          <div class="game-pill">+ More</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how-section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-tag">Simple Process</div>
+        <h2 class="section-title">How Arena 24 Works</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">✉️</div>
+          <h3 class="step-title">Verify Your Email</h3>
+          <p class="step-desc">Register with your email and verify it to unlock all tournaments and platform features.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">🏆</div>
+          <h3 class="step-title">Pick a Tournament</h3>
+          <p class="step-desc">Browse free or paid tournaments. Filter by game, format, prize pool, or platform.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">💸</div>
+          <h3 class="step-title">Pay & Register</h3>
+          <p class="step-desc">Pay entry fee via UPI instantly and secure your slot. Free tournaments join directly.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-icon">🥇</div>
+          <h3 class="step-title">Compete & Win</h3>
+          <p class="step-desc">Play, climb the leaderboard, and win real prize money transferred to your UPI ID.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERBOARD PREVIEW -->
+  <section class="section lb-section">
+    <div class="container">
+      <div class="lb-layout">
+        <div class="lb-left">
+          <div class="section-tag">Rankings</div>
+          <h2 class="section-title">Top Players This Week</h2>
+          <p class="lb-desc">Earn points across tournaments and climb to the top of Arena 24's global leaderboard.</p>
+          <a href="leaderboard.html" class="btn-primary">Full Leaderboard →</a>
+        </div>
+        <div class="lb-right">
+          <div class="lb-table">
+            <div class="lb-row lb-header">
+              <span>Rank</span><span>Player</span><span>Game</span><span>Points</span>
+            </div>
+            <div class="lb-row lb-gold">
+              <span class="rank-badge rank-1">🥇</span>
+              <span class="player-name">ProSniper_RK</span>
+              <span class="game-tag-sm">BGMI</span>
+              <span class="lb-pts">4,820</span>
+            </div>
+            <div class="lb-row lb-silver">
+              <span class="rank-badge rank-2">🥈</span>
+              <span class="player-name">FlameKing_07</span>
+              <span class="game-tag-sm">Free Fire</span>
+              <span class="lb-pts">4,215</span>
+            </div>
+            <div class="lb-row lb-bronze">
+              <span class="rank-badge rank-3">🥉</span>
+              <span class="player-name">ValoAce_Priya</span>
+              <span class="game-tag-sm">Valorant</span>
+              <span class="lb-pts">3,980</span>
+            </div>
+            <div class="lb-row">
+              <span class="rank-badge">4</span>
+              <span class="player-name">HeadshotKing</span>
+              <span class="game-tag-sm">COD</span>
+              <span class="lb-pts">3,740</span>
+            </div>
+            <div class="lb-row">
+              <span class="rank-badge">5</span>
+              <span class="player-name">ChessGuru_Delhi</span>
+              <span class="game-tag-sm">Chess</span>
+              <span class="lb-pts">3,560</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIZE BANNER -->
+  <section class="prize-banner">
+    <div class="container">
+      <div class="prize-content">
+        <div class="prize-text">
+          <h2>Over <span class="prize-highlight">₹8.5 Lakh</span> in Prizes Awarded</h2>
+          <p>Real money, real winners. Every tournament has a guaranteed prize pool paid out via UPI.</p>
+        </div>
+        <a href="register.html" class="btn-primary btn-xl">Join Now — It's Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-a">A</span>RENA<span class="logo-24">24</span>
+          </a>
+          <p>India's premier gaming tournament platform. Compete, conquer, and claim your prize.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link">Discord</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">YouTube</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="tournaments.html">Tournaments</a>
+          <a href="leaderboard.html">Leaderboard</a>
+          <a href="live.html">Live Games</a>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQs</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Arena 24. All rights reserved.</span>
+        <span>Made with ❤️ for Indian Gamers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

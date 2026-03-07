@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaderboard — Arena 24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/leaderboard.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <ul class="nav-links">
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="live.html">Live</a></li>
+        <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-ghost">Login</a>
+        <a href="register.html" class="btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-bg">
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+    </div>
+    <div class="container">
+      <h1 class="page-title">Leaderboard</h1>
+      <p class="page-sub">Top players across all games on Arena 24</p>
+    </div>
+  </div>
+
+  <!-- TOP 3 PODIUM -->
+  <section class="podium-section">
+    <div class="container">
+      <div class="podium-wrap">
+        <!-- 2nd -->
+        <div class="podium-slot silver-slot">
+          <div class="podium-avatar">👤</div>
+          <div class="podium-crown">🥈</div>
+          <div class="podium-name">FlameKing_07</div>
+          <div class="podium-game">Free Fire</div>
+          <div class="podium-pts">4,215 pts</div>
+          <div class="podium-block silver-block"><span>2nd</span></div>
+        </div>
+        <!-- 1st -->
+        <div class="podium-slot gold-slot">
+          <div class="podium-avatar">👤</div>
+          <div class="podium-crown">🏆</div>
+          <div class="podium-name">ProSniper_RK</div>
+          <div class="podium-game">BGMI</div>
+          <div class="podium-pts">4,820 pts</div>
+          <div class="podium-block gold-block"><span>1st</span></div>
+        </div>
+        <!-- 3rd -->
+        <div class="podium-slot bronze-slot">
+          <div class="podium-avatar">👤</div>
+          <div class="podium-crown">🥉</div>
+          <div class="podium-name">ValoAce_Priya</div>
+          <div class="podium-game">Valorant</div>
+          <div class="podium-pts">3,980 pts</div>
+          <div class="podium-block bronze-block"><span>3rd</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN TABLE -->
+  <section class="lb-main-section">
+    <div class="container">
+
+      <!-- FILTER TABS -->
+      <div class="lb-filters">
+        <div class="lb-game-tabs">
+          <button class="lb-tab active" data-game="all">All Games</button>
+          <button class="lb-tab" data-game="bgmi">BGMI</button>
+          <button class="lb-tab" data-game="ff">Free Fire</button>
+          <button class="lb-tab" data-game="valorant">Valorant</button>
+          <button class="lb-tab" data-game="cod">COD Mobile</button>
+          <button class="lb-tab" data-game="chess">Chess</button>
+        </div>
+        <div class="lb-period-tabs">
+          <button class="period-btn active">This Week</button>
+          <button class="period-btn">This Month</button>
+          <button class="period-btn">All Time</button>
+        </div>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="lb-search-row">
+        <div class="filter-search">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search player..." id="lbSearchInput"/>
+        </div>
+        <span class="lb-updated">Last updated: 2 mins ago</span>
+      </div>
+
+      <!-- TABLE -->
+      <div class="lb-full-table">
+        <div class="lbft-header">
+          <span>#</span>
+          <span>Player</span>
+          <span>Game</span>
+          <span>Tournaments</span>
+          <span>Wins</span>
+          <span>K/D</span>
+          <span>Points</span>
+          <span>Earnings</span>
+        </div>
+
+        <div class="lbft-row lbft-gold">
+          <span class="lbft-rank">🥇</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">ProSniper_RK</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">BGMI</span></span>
+          <span>18</span><span class="wins-col">9</span><span>4.2</span>
+          <span class="pts-col">4,820</span><span class="earn-col">₹22,500</span>
+        </div>
+        <div class="lbft-row lbft-silver">
+          <span class="lbft-rank">🥈</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">FlameKing_07</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">Free Fire</span></span>
+          <span>15</span><span class="wins-col">7</span><span>3.8</span>
+          <span class="pts-col">4,215</span><span class="earn-col">₹18,000</span>
+        </div>
+        <div class="lbft-row lbft-bronze">
+          <span class="lbft-rank">🥉</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">ValoAce_Priya</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">Valorant</span></span>
+          <span>12</span><span class="wins-col">6</span><span>3.5</span>
+          <span class="pts-col">3,980</span><span class="earn-col">₹15,000</span>
+        </div>
+        <div class="lbft-row">
+          <span class="lbft-rank lbft-ranknum">4</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">HeadshotKing</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">COD</span></span>
+          <span>14</span><span class="wins-col">5</span><span>3.2</span>
+          <span class="pts-col">3,740</span><span class="earn-col">₹12,000</span>
+        </div>
+        <div class="lbft-row">
+          <span class="lbft-rank lbft-ranknum">5</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">ChessGuru_Delhi</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">Chess</span></span>
+          <span>20</span><span class="wins-col">11</span><span>—</span>
+          <span class="pts-col">3,560</span><span class="earn-col">₹9,500</span>
+        </div>
+        <div class="lbft-row">
+          <span class="lbft-rank lbft-ranknum">6</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">NightHunter_99</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">BGMI</span></span>
+          <span>10</span><span class="wins-col">4</span><span>2.9</span>
+          <span class="pts-col">3,240</span><span class="earn-col">₹8,000</span>
+        </div>
+        <div class="lbft-row">
+          <span class="lbft-rank lbft-ranknum">7</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">GhostWarrior</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">BGMI</span></span>
+          <span>11</span><span class="wins-col">4</span><span>2.7</span>
+          <span class="pts-col">3,100</span><span class="earn-col">₹7,500</span>
+        </div>
+        <div class="lbft-row">
+          <span class="lbft-rank lbft-ranknum">8</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">AimGod_Raj</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">COD</span></span>
+          <span>9</span><span class="wins-col">3</span><span>2.5</span>
+          <span class="pts-col">2,980</span><span class="earn-col">₹6,000</span>
+        </div>
+        <div class="lbft-row">
+          <span class="lbft-rank lbft-ranknum">9</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">FireStorm_Kr</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">Free Fire</span></span>
+          <span>8</span><span class="wins-col">3</span><span>2.4</span>
+          <span class="pts-col">2,750</span><span class="earn-col">₹5,500</span>
+        </div>
+        <div class="lbft-row">
+          <span class="lbft-rank lbft-ranknum">10</span>
+          <span class="lbft-player"><span class="lbft-avatar">👤</span><span class="lbft-pname">TacticMaster</span></span>
+          <span class="lbft-game"><span class="game-tag-sm">Valorant</span></span>
+          <span>7</span><span class="wins-col">2</span><span>2.2</span>
+          <span class="pts-col">2,600</span><span class="earn-col">₹4,500</span>
+        </div>
+      </div>
+
+      <!-- PAGINATION -->
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn page-next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+          <p>India's premier gaming tournament platform.</p>
+        </div>
+        <div class="footer-col"><h4>Platform</h4><a href="tournaments.html">Tournaments</a><a href="leaderboard.html">Leaderboard</a><a href="live.html">Live</a></div>
+        <div class="footer-col"><h4>Account</h4><a href="login.html">Login</a><a href="register.html">Register</a></div>
+        <div class="footer-col"><h4>Support</h4><a href="#">Contact</a><a href="#">FAQs</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2024 Arena 24. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/leaderboard.js"></script>
+</body>
+</html>

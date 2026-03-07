@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Games — Arena 24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/live.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <ul class="nav-links">
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="live.html" class="active">Live</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-ghost">Login</a>
+        <a href="register.html" class="btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header live-header">
+    <div class="page-header-bg">
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+    </div>
+    <div class="container">
+      <div class="live-header-content">
+        <div class="live-pulse-badge"><span class="live-dot"></span> LIVE NOW</div>
+        <h1 class="page-title">Live Games</h1>
+        <p class="page-sub">Watch ongoing tournaments, track live scores and leaderboards in real time</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVE NOW -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><span class="live-dot"></span> Currently Live</div>
+        <h2 class="section-title">Live Tournaments</h2>
+      </div>
+      <div class="live-grid">
+
+        <div class="live-card featured-live">
+          <div class="live-card-top" style="background: linear-gradient(135deg, #ff6b00, #ff0040);">
+            <div class="lc-game-tag">BGMI</div>
+            <div class="lc-live-pill"><span class="live-dot"></span> LIVE</div>
+            <div class="lc-icon">🎯</div>
+            <div class="lc-viewers">👁 2,840 watching</div>
+          </div>
+          <div class="live-card-body">
+            <h3>BGMI Solo Showdown — Round 2</h3>
+            <div class="lc-meta">
+              <span>👤 Solo</span>
+              <span>104 Players</span>
+              <span>📱 Mobile</span>
+            </div>
+            <div class="lc-mini-lb">
+              <div class="mlb-title">🏆 Current Top 3</div>
+              <div class="mlb-row"><span class="mlb-rank">1</span><span class="mlb-name">ProSniper_RK</span><span class="mlb-pts">72 pts</span></div>
+              <div class="mlb-row"><span class="mlb-rank">2</span><span class="mlb-name">HeadshotKing</span><span class="mlb-pts">64 pts</span></div>
+              <div class="mlb-row"><span class="mlb-rank">3</span><span class="mlb-name">GhostWarrior</span><span class="mlb-pts">58 pts</span></div>
+            </div>
+            <div class="lc-actions">
+              <a href="tournament-detail.html" class="btn-primary">Full Leaderboard</a>
+              <a href="tournament-detail.html" class="btn-outline">Tournament Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="live-card">
+          <div class="live-card-top" style="background: linear-gradient(135deg, #2d6a4f, #52b788);">
+            <div class="lc-game-tag">Chess</div>
+            <div class="lc-live-pill"><span class="live-dot"></span> LIVE</div>
+            <div class="lc-icon">♟️</div>
+            <div class="lc-viewers">👁 540 watching</div>
+          </div>
+          <div class="live-card-body">
+            <h3>Chess Blitz — Quarterfinals</h3>
+            <div class="lc-meta">
+              <span>👤 Solo</span>
+              <span>8 Players Left</span>
+              <span>💻 PC</span>
+            </div>
+            <div class="lc-mini-lb">
+              <div class="mlb-title">🏆 Current Top 3</div>
+              <div class="mlb-row"><span class="mlb-rank">1</span><span class="mlb-name">ChessGuru_Delhi</span><span class="mlb-pts">7W</span></div>
+              <div class="mlb-row"><span class="mlb-rank">2</span><span class="mlb-name">QueenSlayer</span><span class="mlb-pts">6W</span></div>
+              <div class="mlb-row"><span class="mlb-rank">3</span><span class="mlb-name">PawnMaster</span><span class="mlb-pts">5W</span></div>
+            </div>
+            <div class="lc-actions">
+              <a href="tournament-detail.html" class="btn-primary">Full Leaderboard</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="live-card">
+          <div class="live-card-top" style="background: linear-gradient(135deg, #006400, #00a86b);">
+            <div class="lc-game-tag">FIFA Mobile</div>
+            <div class="lc-live-pill"><span class="live-dot"></span> LIVE</div>
+            <div class="lc-icon">⚽</div>
+            <div class="lc-viewers">👁 920 watching</div>
+          </div>
+          <div class="live-card-body">
+            <h3>FIFA Mobile League — Semis</h3>
+            <div class="lc-meta">
+              <span>👤 1v1</span>
+              <span>4 Players</span>
+              <span>📱 Mobile</span>
+            </div>
+            <div class="lc-mini-lb">
+              <div class="mlb-title">🏆 Current Bracket</div>
+              <div class="mlb-row"><span class="mlb-rank">SF1</span><span class="mlb-name">GoalMachine vs KingKick</span><span class="mlb-pts">2-1</span></div>
+              <div class="mlb-row"><span class="mlb-rank">SF2</span><span class="mlb-name">NetBuster vs DribbleGod</span><span class="mlb-pts">1-1</span></div>
+            </div>
+            <div class="lc-actions">
+              <a href="tournament-detail.html" class="btn-primary">Full Bracket</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING SOON -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Starting Soon</div>
+        <h2 class="section-title">Upcoming Matches</h2>
+      </div>
+      <div class="upcoming-list">
+
+        <div class="upcoming-item">
+          <div class="upcoming-time">
+            <div class="upt-countdown" id="cd1">02:45:00</div>
+            <div class="upt-label">Starts In</div>
+          </div>
+          <div class="upcoming-icon" style="background: linear-gradient(135deg,#00c9a7,#0066ff)">⚡</div>
+          <div class="upcoming-info">
+            <h4>Valorant 5v5 Clash — Group Stage</h4>
+            <div class="upt-meta">
+              <span class="game-tag-sm">Valorant</span>
+              <span>👥 16 Teams</span>
+              <span>💻 PC</span>
+              <span>Bracket Format</span>
+            </div>
+          </div>
+          <div class="upcoming-right">
+            <span class="upt-prize">₹25,000</span>
+            <a href="tournament-detail.html" class="btn-outline">Details</a>
+          </div>
+        </div>
+
+        <div class="upcoming-item">
+          <div class="upcoming-time">
+            <div class="upt-countdown" id="cd2">05:10:00</div>
+            <div class="upt-label">Starts In</div>
+          </div>
+          <div class="upcoming-icon" style="background: linear-gradient(135deg,#7b2ff7,#ff6b00)">🔥</div>
+          <div class="upcoming-info">
+            <h4>Free Fire Squad Cup — Round 1</h4>
+            <div class="upt-meta">
+              <span class="game-tag-sm">Free Fire</span>
+              <span>👥 32 Teams</span>
+              <span>📱 Mobile</span>
+              <span>Round Robin</span>
+            </div>
+          </div>
+          <div class="upcoming-right">
+            <span class="upt-prize">FREE</span>
+            <a href="tournament-detail.html" class="btn-outline">Details</a>
+          </div>
+        </div>
+
+        <div class="upcoming-item">
+          <div class="upcoming-time">
+            <div class="upt-countdown" id="cd3">08:00:00</div>
+            <div class="upt-label">Starts In</div>
+          </div>
+          <div class="upcoming-icon" style="background: linear-gradient(135deg,#1a1a2e,#16213e)">💥</div>
+          <div class="upcoming-info">
+            <h4>COD Sniper Series — Group A</h4>
+            <div class="upt-meta">
+              <span class="game-tag-sm">COD Mobile</span>
+              <span>👤 Solo</span>
+              <span>📱 Mobile</span>
+              <span>Bracket</span>
+            </div>
+          </div>
+          <div class="upcoming-right">
+            <span class="upt-prize">₹5,000</span>
+            <a href="tournament-detail.html" class="btn-outline">Details</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENTLY COMPLETED -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Results</div>
+        <h2 class="section-title">Recently Completed</h2>
+      </div>
+      <div class="completed-grid">
+        <div class="completed-card">
+          <div class="cc-header"><span class="game-tag-sm">BGMI</span><span class="cc-status">✅ Completed</span></div>
+          <h4>BGMI Solo Series — Round 1</h4>
+          <div class="cc-winner">🥇 Winner: <strong>ProSniper_RK</strong></div>
+          <div class="cc-prize">Prize: ₹4,000 paid</div>
+          <a href="tournament-detail.html" class="btn-ghost btn-sm">View Results</a>
+        </div>
+        <div class="completed-card">
+          <div class="cc-header"><span class="game-tag-sm">Ludo King</span><span class="cc-status">✅ Completed</span></div>
+          <h4>Ludo King Weekly Open</h4>
+          <div class="cc-winner">🥇 Winner: <strong>LuckyRoll_24</strong></div>
+          <div class="cc-prize">Prize: ₹800 paid</div>
+          <a href="tournament-detail.html" class="btn-ghost btn-sm">View Results</a>
+        </div>
+        <div class="completed-card">
+          <div class="cc-header"><span class="game-tag-sm">Chess</span><span class="cc-status">✅ Completed</span></div>
+          <h4>Chess Rapid Weekend Cup</h4>
+          <div class="cc-winner">🥇 Winner: <strong>PawnMaster</strong></div>
+          <div class="cc-prize">Prize: ₹1,200 paid</div>
+          <a href="tournament-detail.html" class="btn-ghost btn-sm">View Results</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+          <p>India's premier gaming tournament platform.</p>
+        </div>
+        <div class="footer-col"><h4>Platform</h4><a href="tournaments.html">Tournaments</a><a href="leaderboard.html">Leaderboard</a><a href="live.html">Live</a></div>
+        <div class="footer-col"><h4>Account</h4><a href="login.html">Login</a><a href="register.html">Register</a></div>
+        <div class="footer-col"><h4>Support</h4><a href="#">Contact</a><a href="#">FAQs</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2024 Arena 24. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/live.js"></script>
+</body>
+</html>

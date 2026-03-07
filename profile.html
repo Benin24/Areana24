@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile — Arena 24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <ul class="nav-links">
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="live.html">Live</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+      <div class="nav-actions nav-logged-in">
+        <a href="dashboard.html" class="nav-dashboard-btn">Dashboard</a>
+        <div class="nav-user-menu" id="userMenu">
+          <div class="nav-avatar" id="avatarBtn">👤 <span>ProSniper_RK</span> ▾</div>
+          <div class="user-dropdown" id="userDropdown">
+            <a href="profile.html">My Profile</a>
+            <a href="dashboard.html">Dashboard</a>
+            <div class="dropdown-divider"></div>
+            <a href="login.html" class="logout-link">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROFILE HEADER -->
+  <div class="profile-hero">
+    <div class="profile-hero-bg"></div>
+    <div class="container">
+      <div class="profile-hero-content">
+        <div class="profile-avatar-wrap">
+          <div class="profile-avatar">👤</div>
+          <div class="profile-avatar-edit" id="editAvatarBtn">✏️</div>
+        </div>
+        <div class="profile-hero-info">
+          <div class="profile-tags">
+            <span class="tag-verified">✅ Verified</span>
+            <span class="tag-rank">🏆 Rank #1 Global</span>
+          </div>
+          <h1 class="profile-username">ProSniper_RK</h1>
+          <p class="profile-realname">Rajesh Kumar · Mumbai, India</p>
+          <p class="profile-bio">Professional BGMI player · 9 tournament wins · Let the games begin 🎯</p>
+          <div class="profile-socials">
+            <span>Joined: Dec 2024</span>
+          </div>
+        </div>
+        <div class="profile-hero-actions">
+          <button class="btn-primary" id="editProfileBtn">Edit Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFILE BODY -->
+  <div class="profile-body container">
+
+    <!-- STATS CARDS -->
+    <div class="profile-stats-row">
+      <div class="pstat-card"><span class="pstat-val">18</span><span class="pstat-label">Tournaments</span></div>
+      <div class="pstat-card pstat-highlight"><span class="pstat-val">9</span><span class="pstat-label">Wins</span></div>
+      <div class="pstat-card"><span class="pstat-val">50%</span><span class="pstat-label">Win Rate</span></div>
+      <div class="pstat-card"><span class="pstat-val">4,820</span><span class="pstat-label">Points</span></div>
+      <div class="pstat-card pstat-prize"><span class="pstat-val">₹22,500</span><span class="pstat-label">Earned</span></div>
+    </div>
+
+    <div class="profile-grid">
+
+      <!-- LEFT: ABOUT & SETTINGS -->
+      <div class="profile-left">
+
+        <!-- EDIT FORM (hidden by default) -->
+        <div class="profile-card" id="editForm" style="display:none">
+          <h3>Edit Profile</h3>
+          <form class="auth-form" id="profileEditForm">
+            <div class="form-group">
+              <label>Username / Gaming ID</label>
+              <div class="input-wrap"><span class="input-icon">🎮</span><input type="text" value="ProSniper_RK" /></div>
+            </div>
+            <div class="form-group">
+              <label>Bio</label>
+              <textarea rows="3" class="textarea-field">Professional BGMI player · 9 tournament wins · Let the games begin 🎯</textarea>
+            </div>
+            <div class="form-group">
+              <label>UPI ID (for prize payouts)</label>
+              <div class="input-wrap"><span class="input-icon">💳</span><input type="text" value="prosniper@upi" /></div>
+            </div>
+            <div class="form-group">
+              <label>Favourite Game</label>
+              <select class="filter-select">
+                <option selected>BGMI</option><option>Free Fire</option><option>Valorant</option><option>COD Mobile</option>
+              </select>
+            </div>
+            <div class="form-row-inline">
+              <button type="submit" class="btn-primary">Save Changes</button>
+              <button type="button" class="btn-outline" id="cancelEditBtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ABOUT CARD -->
+        <div class="profile-card" id="aboutCard">
+          <h3>Player Info</h3>
+          <div class="info-rows">
+            <div class="info-row"><span class="ir-label">Full Name</span><span class="ir-val">Rajesh Kumar</span></div>
+            <div class="info-row"><span class="ir-label">Username</span><span class="ir-val">ProSniper_RK</span></div>
+            <div class="info-row"><span class="ir-label">Email</span><span class="ir-val">prosniper@gmail.com ✅</span></div>
+            <div class="info-row"><span class="ir-label">Phone</span><span class="ir-val">+91 98XXXXXX12</span></div>
+            <div class="info-row"><span class="ir-label">UPI ID</span><span class="ir-val">prosniper@upi</span></div>
+            <div class="info-row"><span class="ir-label">Favourite Game</span><span class="ir-val">BGMI</span></div>
+            <div class="info-row"><span class="ir-label">Member Since</span><span class="ir-val">December 2024</span></div>
+          </div>
+        </div>
+
+        <!-- CHANGE PASSWORD -->
+        <div class="profile-card">
+          <h3>Security</h3>
+          <form class="auth-form" id="pwChangeForm">
+            <div class="form-group">
+              <label>Current Password</label>
+              <div class="input-wrap"><span class="input-icon">🔒</span><input type="password" placeholder="Current password" /></div>
+            </div>
+            <div class="form-group">
+              <label>New Password</label>
+              <div class="input-wrap"><span class="input-icon">🔒</span><input type="password" placeholder="New password" /></div>
+            </div>
+            <div class="form-group">
+              <label>Confirm New Password</label>
+              <div class="input-wrap"><span class="input-icon">🔒</span><input type="password" placeholder="Confirm password" /></div>
+            </div>
+            <button type="submit" class="btn-primary">Update Password</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT: HISTORY & ACHIEVEMENTS -->
+      <div class="profile-right">
+
+        <!-- GAME STATS -->
+        <div class="profile-card">
+          <h3>Game Stats</h3>
+          <div class="game-stats-list">
+            <div class="gs-item">
+              <div class="gs-game"><span class="game-tag-sm">BGMI</span></div>
+              <div class="gs-bar-wrap">
+                <div class="gs-label">Win Rate</div>
+                <div class="gs-bar"><div class="gs-fill" style="width:60%"></div></div>
+                <div class="gs-pct">60%</div>
+              </div>
+              <div class="gs-nums"><span>12 played</span><span>7 wins</span></div>
+            </div>
+            <div class="gs-item">
+              <div class="gs-game"><span class="game-tag-sm">COD</span></div>
+              <div class="gs-bar-wrap">
+                <div class="gs-label">Win Rate</div>
+                <div class="gs-bar"><div class="gs-fill" style="width:33%"></div></div>
+                <div class="gs-pct">33%</div>
+              </div>
+              <div class="gs-nums"><span>6 played</span><span>2 wins</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOURNAMENT HISTORY -->
+        <div class="profile-card">
+          <h3>Tournament History</h3>
+          <div class="t-history-list">
+            <div class="th-item">
+              <span class="game-tag-sm">BGMI</span>
+              <div class="th-info">
+                <div class="th-name">BGMI Solo Showdown</div>
+                <div class="th-date">Dec 2024 · In Progress</div>
+              </div>
+              <span class="th-result live-badge-sm">Live</span>
+              <span class="th-prize">—</span>
+            </div>
+            <div class="th-item">
+              <span class="game-tag-sm">BGMI</span>
+              <div class="th-info">
+                <div class="th-name">BGMI Solo Series</div>
+                <div class="th-date">Dec 22, 2024</div>
+              </div>
+              <span class="th-result win-badge">🥇 1st</span>
+              <span class="th-prize">₹4,000</span>
+            </div>
+            <div class="th-item">
+              <span class="game-tag-sm">Free Fire</span>
+              <div class="th-info">
+                <div class="th-name">Free Fire Weekly</div>
+                <div class="th-date">Dec 18, 2024</div>
+              </div>
+              <span class="th-result win-badge">🥇 1st</span>
+              <span class="th-prize">₹2,000</span>
+            </div>
+            <div class="th-item">
+              <span class="game-tag-sm">COD</span>
+              <div class="th-info">
+                <div class="th-name">COD Sniper Cup</div>
+                <div class="th-date">Dec 15, 2024</div>
+              </div>
+              <span class="th-result place-badge">🥉 3rd</span>
+              <span class="th-prize">₹500</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <div class="profile-card">
+          <h3>Achievements</h3>
+          <div class="achievements-grid">
+            <div class="ach-item unlocked" title="First Win"><div class="ach-icon">🥇</div><div class="ach-name">First Blood</div></div>
+            <div class="ach-item unlocked" title="5 Wins"><div class="ach-icon">🔥</div><div class="ach-name">On Fire</div></div>
+            <div class="ach-item unlocked" title="Rank #1"><div class="ach-icon">👑</div><div class="ach-name">King of Arena</div></div>
+            <div class="ach-item unlocked" title="Earned ₹10,000"><div class="ach-icon">💰</div><div class="ach-name">Prize Hunter</div></div>
+            <div class="ach-item locked" title="10 Wins"><div class="ach-icon">🔒</div><div class="ach-name">Unstoppable</div></div>
+            <div class="ach-item locked" title="Earn ₹50,000"><div class="ach-icon">🔒</div><div class="ach-name">Big Earner</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom"><span>© 2024 Arena 24. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

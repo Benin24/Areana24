@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Tournament — Arena 24 Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <nav class="navbar admin-nav" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <div class="admin-nav-badge">⚙️ Admin Panel</div>
+      <div class="nav-actions"><div class="nav-avatar">👤 Admin</div><a href="login.html" class="btn-ghost">Logout</a></div>
+    </div>
+  </nav>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-title">Admin Menu</div>
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sn-item"><span>🏠</span> Dashboard</a>
+        <a href="admin-tournaments.html" class="sn-item"><span>🏆</span> Tournaments</a>
+        <a href="admin-users.html" class="sn-item"><span>👥</span> Users</a>
+        <a href="admin-payments.html" class="sn-item"><span>💸</span> Payments</a>
+        <div class="sn-divider"></div>
+        <a href="create-tournament.html" class="sn-item sn-highlight active"><span>➕</span> New Tournament</a>
+        <a href="index.html" class="sn-item"><span>🌐</span> View Site</a>
+        <a href="login.html" class="sn-item sn-logout"><span>🚪</span> Logout</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-page-header">
+        <h1>Create New Tournament</h1>
+        <a href="admin-tournaments.html" class="btn-ghost">← Back to Tournaments</a>
+      </div>
+
+      <div class="create-t-layout">
+
+        <!-- FORM -->
+        <div class="create-t-form-wrap">
+          <form class="create-t-form" id="createTForm" novalidate>
+
+            <!-- STEP 1: BASIC INFO -->
+            <div class="ct-section">
+              <div class="ct-section-title"><span class="ct-step">1</span> Basic Information</div>
+              <div class="form-group">
+                <label>Tournament Name *</label>
+                <div class="input-wrap"><span class="input-icon">🏆</span><input type="text" id="ct-name" placeholder="e.g. BGMI Solo Showdown Season 2" required /></div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Game *</label>
+                  <select class="filter-select full-w" id="ct-game" required>
+                    <option value="">Select Game</option>
+                    <option>BGMI</option>
+                    <option>Free Fire</option>
+                    <option>COD Mobile</option>
+                    <option>Valorant</option>
+                    <option>Chess</option>
+                    <option>Ludo King</option>
+                    <option>FIFA Mobile</option>
+                    <option>Tekken</option>
+                    <option>PUBG PC</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Platform *</label>
+                  <select class="filter-select full-w" id="ct-platform">
+                    <option>Mobile</option>
+                    <option>PC</option>
+                    <option>PC & Mobile</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Description</label>
+                <textarea class="textarea-field" id="ct-desc" rows="3" placeholder="Describe the tournament, special rules, prizes..."></textarea>
+              </div>
+            </div>
+
+            <!-- STEP 2: FORMAT -->
+            <div class="ct-section">
+              <div class="ct-section-title"><span class="ct-step">2</span> Tournament Format</div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Format *</label>
+                  <select class="filter-select full-w" id="ct-format">
+                    <option>Leaderboard</option>
+                    <option>Bracket (Single Elimination)</option>
+                    <option>Bracket (Double Elimination)</option>
+                    <option>Round Robin</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Player Type *</label>
+                  <select class="filter-select full-w" id="ct-type" onchange="toggleTeamSize()">
+                    <option>Solo</option>
+                    <option>Team</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row-2" id="teamSizeRow" style="display:none">
+                <div class="form-group">
+                  <label>Team Size</label>
+                  <select class="filter-select full-w" id="ct-teamsize">
+                    <option>2v2</option>
+                    <option>4v4</option>
+                    <option>5v5</option>
+                    <option>Custom</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Max Players / Teams *</label>
+                  <div class="input-wrap"><span class="input-icon">👥</span><input type="number" id="ct-maxplayers" placeholder="e.g. 128" min="2" required /></div>
+                </div>
+                <div class="form-group">
+                  <label>Min Players to Start</label>
+                  <div class="input-wrap"><span class="input-icon">👤</span><input type="number" id="ct-minplayers" placeholder="e.g. 16" min="2" /></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: SCHEDULE -->
+            <div class="ct-section">
+              <div class="ct-section-title"><span class="ct-step">3</span> Schedule</div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Registration Opens *</label>
+                  <input type="datetime-local" class="upi-input" id="ct-reg-open" required />
+                </div>
+                <div class="form-group">
+                  <label>Registration Closes *</label>
+                  <input type="datetime-local" class="upi-input" id="ct-reg-close" required />
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Tournament Start *</label>
+                  <input type="datetime-local" class="upi-input" id="ct-start" required />
+                </div>
+                <div class="form-group">
+                  <label>Tournament End</label>
+                  <input type="datetime-local" class="upi-input" id="ct-end" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Number of Rounds</label>
+                <div class="input-wrap"><span class="input-icon">🔄</span><input type="number" id="ct-rounds" placeholder="e.g. 4" min="1" /></div>
+              </div>
+            </div>
+
+            <!-- STEP 4: FEES & PRIZES -->
+            <div class="ct-section">
+              <div class="ct-section-title"><span class="ct-step">4</span> Entry Fee & Prize Pool</div>
+              <div class="form-group">
+                <label>Entry Type</label>
+                <div class="radio-group">
+                  <label class="radio-label"><input type="radio" name="entryType" value="free" id="entryFree" checked onchange="toggleFeeField()"> Free Entry</label>
+                  <label class="radio-label"><input type="radio" name="entryType" value="paid" id="entryPaid" onchange="toggleFeeField()"> Paid Entry</label>
+                </div>
+              </div>
+              <div class="form-row-2" id="feeRow" style="display:none">
+                <div class="form-group">
+                  <label>Entry Fee (₹) *</label>
+                  <div class="input-wrap"><span class="input-icon">💳</span><input type="number" id="ct-fee" placeholder="e.g. 100" /></div>
+                  <span class="field-hint">Per player for solo / per team for team tournaments</span>
+                </div>
+                <div class="form-group">
+                  <label>UPI ID to receive payments *</label>
+                  <div class="input-wrap"><span class="input-icon">📱</span><input type="text" id="ct-upi" placeholder="arena24@upi" /></div>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Total Prize Pool (₹) *</label>
+                  <div class="input-wrap"><span class="input-icon">🏆</span><input type="number" id="ct-prize" placeholder="e.g. 10000" required /></div>
+                </div>
+              </div>
+
+              <!-- PRIZE DISTRIBUTION -->
+              <div class="form-group">
+                <label>Prize Distribution</label>
+                <div class="prize-dist-rows" id="prizeDistRows">
+                  <div class="pd-row">
+                    <span>🥇 1st Place</span>
+                    <div class="input-wrap sm"><input type="number" placeholder="₹" class="upi-input" /></div>
+                    <div class="input-wrap sm"><input type="number" placeholder="%" class="upi-input" /></div>
+                  </div>
+                  <div class="pd-row">
+                    <span>🥈 2nd Place</span>
+                    <div class="input-wrap sm"><input type="number" placeholder="₹" class="upi-input" /></div>
+                    <div class="input-wrap sm"><input type="number" placeholder="%" class="upi-input" /></div>
+                  </div>
+                  <div class="pd-row">
+                    <span>🥉 3rd Place</span>
+                    <div class="input-wrap sm"><input type="number" placeholder="₹" class="upi-input" /></div>
+                    <div class="input-wrap sm"><input type="number" placeholder="%" class="upi-input" /></div>
+                  </div>
+                </div>
+                <button type="button" class="btn-ghost btn-sm" id="addPrizeTier">+ Add Tier</button>
+              </div>
+            </div>
+
+            <!-- STEP 5: RULES -->
+            <div class="ct-section">
+              <div class="ct-section-title"><span class="ct-step">5</span> Rules & Settings</div>
+              <div class="form-group">
+                <label>Tournament Rules</label>
+                <textarea class="textarea-field" id="ct-rules" rows="6" placeholder="1. All players must join room 10 mins before start...&#10;2. Emulators are not allowed...&#10;3. Hacking or teaming results in disqualification..."></textarea>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Game External Link</label>
+                  <div class="input-wrap"><span class="input-icon">🔗</span><input type="url" id="ct-link" placeholder="https://play.google.com/..." /></div>
+                </div>
+                <div class="form-group">
+                  <label>Scoring System</label>
+                  <select class="filter-select full-w" id="ct-scoring">
+                    <option>Kills + Placement Points</option>
+                    <option>Kills Only</option>
+                    <option>Placement Only</option>
+                    <option>Wins Only</option>
+                    <option>Custom</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="ct-visible" checked /> Tournament visible on public listings
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="ct-notify" checked /> Notify registered users via email before each round
+                </label>
+              </div>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="ct-submit-row">
+              <button type="button" class="btn-outline" id="saveDraft">💾 Save as Draft</button>
+              <button type="submit" class="btn-primary btn-xl" id="publishTBtn">🚀 Publish Tournament</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- PREVIEW CARD -->
+        <div class="create-t-preview">
+          <div class="ct-preview-title">Live Preview</div>
+          <div class="t-card preview-card">
+            <div class="t-card-banner" id="previewBanner" style="background: linear-gradient(135deg, #ff6b00, #ff0040);">
+              <div class="t-game-tag" id="previewGame">Game</div>
+              <div class="t-banner-icon">🏆</div>
+            </div>
+            <div class="t-card-body">
+              <h3 class="t-title" id="previewTitle">Tournament Name</h3>
+              <div class="t-meta">
+                <span class="t-meta-item" id="previewType">Solo</span>
+                <span class="t-meta-item" id="previewFormat">Leaderboard</span>
+              </div>
+              <div class="t-prize-row">
+                <div class="t-prize"><span class="prize-label">Prize Pool</span><span class="prize-amount" id="previewPrize">₹0</span></div>
+                <div class="t-entry"><span class="entry-label">Entry</span><span class="entry-amount" id="previewFee">Free</span></div>
+              </div>
+              <div class="t-progress-row">
+                <span class="t-spots">0/0 Players</span>
+                <div class="t-progress-bar"><div class="t-progress-fill" style="width:0%"></div></div>
+              </div>
+              <a href="#" class="btn-outline btn-full">View Tournament</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/global.js"></script>
+  <script src="js/create-tournament.js"></script>
+</body>
+</html>

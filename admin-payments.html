@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payments — Arena 24 Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <nav class="navbar admin-nav" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <div class="admin-nav-badge">⚙️ Admin Panel</div>
+      <div class="nav-actions"><div class="nav-avatar">👤 Admin</div><a href="login.html" class="btn-ghost">Logout</a></div>
+    </div>
+  </nav>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-title">Admin Menu</div>
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sn-item"><span>🏠</span> Dashboard</a>
+        <a href="admin-tournaments.html" class="sn-item"><span>🏆</span> Tournaments</a>
+        <a href="admin-users.html" class="sn-item"><span>👥</span> Users</a>
+        <a href="admin-payments.html" class="sn-item active"><span>💸</span> Payments</a>
+        <div class="sn-divider"></div>
+        <a href="create-tournament.html" class="sn-item sn-highlight"><span>➕</span> New Tournament</a>
+        <a href="index.html" class="sn-item"><span>🌐</span> View Site</a>
+        <a href="login.html" class="sn-item sn-logout"><span>🚪</span> Logout</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-page-header">
+        <h1>Payments & Payouts</h1>
+        <p>Track all entry fees collected and prize money paid out</p>
+      </div>
+
+      <!-- FINANCE SUMMARY -->
+      <div class="admin-stats-row">
+        <div class="admin-stat-card asc-green">
+          <div class="asc-icon">💰</div>
+          <div class="asc-info"><span class="asc-val">₹8,52,000</span><span class="asc-label">Total Collected</span><span class="asc-change">Entry fees</span></div>
+        </div>
+        <div class="admin-stat-card asc-orange">
+          <div class="asc-icon">🏆</div>
+          <div class="asc-info"><span class="asc-val">₹6,10,000</span><span class="asc-label">Prizes Paid Out</span><span class="asc-change">To winners via UPI</span></div>
+        </div>
+        <div class="admin-stat-card asc-purple">
+          <div class="asc-icon">💹</div>
+          <div class="asc-info"><span class="asc-val">₹2,42,000</span><span class="asc-label">Platform Retained</span><span class="asc-change">Net earnings</span></div>
+        </div>
+        <div class="admin-stat-card asc-blue">
+          <div class="asc-icon">⏳</div>
+          <div class="asc-info"><span class="asc-val">₹18,400</span><span class="asc-label">Pending Prizes</span><span class="asc-change">Awaiting payout</span></div>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="t-tabs" style="margin-bottom:24px">
+        <button class="t-tab active" data-tab="pending">⚠️ Pending Verification</button>
+        <button class="t-tab" data-tab="entries">Entry Fees</button>
+        <button class="t-tab" data-tab="prizes">Prize Payouts</button>
+      </div>
+
+      <!-- PENDING VERIFICATION -->
+      <div class="t-tab-content active" id="tab-pending">
+        <div class="admin-section">
+          <div class="admin-section-header"><h2>Unverified UPI Payments</h2><span class="notif-count">2 pending</span></div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr><th>Player</th><th>Tournament</th><th>Amount</th><th>UPI TxnID</th><th>IGN</th><th>Submitted</th><th>Action</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>user_rk123</td><td>BGMI Solo Showdown</td><td>₹100</td><td class="txn-id">4178XXX832XXXXXXX</td><td>ProSniper_RK</td><td>5 mins ago</td>
+                  <td class="at-actions">
+                    <button class="tbl-btn tbl-btn-success">✅ Approve</button>
+                    <button class="tbl-btn tbl-btn-danger">❌ Reject</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>user_flame07</td><td>BGMI Solo Showdown</td><td>₹100</td><td class="txn-id">9234XXX541XXXXXXX</td><td>FlameKing_07</td><td>12 mins ago</td>
+                  <td class="at-actions">
+                    <button class="tbl-btn tbl-btn-success">✅ Approve</button>
+                    <button class="tbl-btn tbl-btn-danger">❌ Reject</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTRY FEES -->
+      <div class="t-tab-content" id="tab-entries">
+        <div class="admin-section">
+          <div class="admin-filter-row">
+            <div class="filter-search"><span class="search-icon">🔍</span><input type="text" placeholder="Search..."/></div>
+            <select class="filter-select"><option>All Tournaments</option><option>BGMI Solo Showdown</option><option>Valorant 5v5 Clash</option></select>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Date</th><th>Player</th><th>Tournament</th><th>Amount</th><th>UPI TxnID</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Dec 22</td><td>ProSniper_RK</td><td>BGMI Solo Showdown</td><td>₹100</td><td class="txn-id">4178XXX832</td><td><span class="verified-badge">✅ Verified</span></td></tr>
+                <tr><td>Dec 22</td><td>FlameKing_07</td><td>BGMI Solo Showdown</td><td>₹100</td><td class="txn-id">9234XXX541</td><td><span class="verified-badge">✅ Verified</span></td></tr>
+                <tr><td>Dec 21</td><td>ValoAce_Priya</td><td>Valorant 5v5 Clash</td><td>₹500</td><td class="txn-id">7812XXX234</td><td><span class="verified-badge">✅ Verified</span></td></tr>
+                <tr><td>Dec 21</td><td>HeadshotKing</td><td>BGMI Solo Showdown</td><td>₹100</td><td class="txn-id">6543XXX789</td><td><span class="verified-badge">✅ Verified</span></td></tr>
+                <tr><td>Dec 20</td><td>ChessGuru_Delhi</td><td>Chess Blitz</td><td>Free</td><td>—</td><td><span class="verified-badge">✅ Free</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRIZE PAYOUTS -->
+      <div class="t-tab-content" id="tab-prizes">
+        <div class="admin-section">
+          <div class="admin-section-header">
+            <h2>Prize Payouts</h2>
+            <button class="btn-primary" id="newPayoutBtn">+ Add Payout</button>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Date</th><th>Tournament</th><th>Winner</th><th>Position</th><th>Amount</th><th>UPI ID</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Dec 22</td><td>BGMI Solo Series</td><td>ProSniper_RK</td><td>🥇 1st</td><td class="prize-col">₹4,000</td><td>prosniper@upi</td>
+                  <td><span class="received-badge">✅ Paid</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Dec 22</td><td>BGMI Solo Series</td><td>FlameKing_07</td><td>🥈 2nd</td><td class="prize-col">₹2,500</td><td>flame07@upi</td>
+                  <td><span class="received-badge">✅ Paid</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Dec 22</td><td>BGMI Solo Series</td><td>GhostWarrior</td><td>🥉 3rd</td><td class="prize-col">₹1,500</td><td>ghost@upi</td>
+                  <td><span class="pending-badge">⏳ Pending</span></td>
+                  <td><button class="tbl-btn tbl-btn-success">Mark Paid</button></td>
+                </tr>
+                <tr>
+                  <td>Dec 18</td><td>Free Fire Weekly</td><td>FlameKing_07</td><td>🥇 1st</td><td class="prize-col">₹2,000</td><td>flame07@upi</td>
+                  <td><span class="received-badge">✅ Paid</span></td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- NEW PAYOUT MODAL -->
+  <div class="modal-overlay hidden" id="payoutModal">
+    <div class="modal">
+      <button class="modal-close" id="closePayoutModal">✕</button>
+      <div class="modal-header"><h3>Record Prize Payout</h3></div>
+      <div class="modal-body">
+        <div class="form-group"><label>Tournament</label><select class="filter-select" style="width:100%"><option>BGMI Solo Showdown</option><option>Valorant 5v5 Clash</option></select></div>
+        <div class="form-group"><label>Winner Username</label><input type="text" class="upi-input" placeholder="e.g. ProSniper_RK"/></div>
+        <div class="form-row-2">
+          <div class="form-group"><label>Position</label><input type="text" class="upi-input" placeholder="e.g. 1st"/></div>
+          <div class="form-group"><label>Prize Amount (₹)</label><input type="number" class="upi-input" placeholder="4000"/></div>
+        </div>
+        <div class="form-group"><label>Winner's UPI ID</label><input type="text" class="upi-input" placeholder="winner@upi"/></div>
+        <button class="btn-primary btn-full">Save Payout Record</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/global.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

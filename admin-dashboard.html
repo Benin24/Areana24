@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard — Arena 24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- ADMIN NAVBAR -->
+  <nav class="navbar admin-nav" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <div class="admin-nav-badge">⚙️ Admin Panel</div>
+      <div class="nav-actions nav-logged-in">
+        <div class="nav-avatar">👤 <span>Admin</span></div>
+        <a href="login.html" class="btn-ghost">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="admin-layout">
+
+    <!-- ADMIN SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-title">Admin Menu</div>
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sn-item active"><span>🏠</span> Dashboard</a>
+        <a href="admin-tournaments.html" class="sn-item"><span>🏆</span> Tournaments</a>
+        <a href="admin-users.html" class="sn-item"><span>👥</span> Users</a>
+        <a href="admin-payments.html" class="sn-item"><span>💸</span> Payments</a>
+        <div class="sn-divider"></div>
+        <a href="create-tournament.html" class="sn-item sn-highlight"><span>➕</span> New Tournament</a>
+        <a href="index.html" class="sn-item"><span>🌐</span> View Site</a>
+        <a href="login.html" class="sn-item sn-logout"><span>🚪</span> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- ADMIN MAIN -->
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <h1>Admin Dashboard</h1>
+        <p>Arena 24 platform overview — <span id="adminDate"></span></p>
+      </div>
+
+      <!-- OVERVIEW STATS -->
+      <div class="admin-stats-row">
+        <div class="admin-stat-card asc-blue">
+          <div class="asc-icon">👥</div>
+          <div class="asc-info">
+            <span class="asc-val">12,408</span>
+            <span class="asc-label">Total Users</span>
+            <span class="asc-change">+240 this week</span>
+          </div>
+        </div>
+        <div class="admin-stat-card asc-orange">
+          <div class="asc-icon">🏆</div>
+          <div class="asc-info">
+            <span class="asc-val">347</span>
+            <span class="asc-label">Tournaments</span>
+            <span class="asc-change">3 live now</span>
+          </div>
+        </div>
+        <div class="admin-stat-card asc-green">
+          <div class="asc-icon">💰</div>
+          <div class="asc-info">
+            <span class="asc-val">₹8,52,000</span>
+            <span class="asc-label">Total Revenue</span>
+            <span class="asc-change">+₹18,400 this week</span>
+          </div>
+        </div>
+        <div class="admin-stat-card asc-purple">
+          <div class="asc-icon">🥇</div>
+          <div class="asc-info">
+            <span class="asc-val">₹6,10,000</span>
+            <span class="asc-label">Prizes Paid Out</span>
+            <span class="asc-change">₹2,42,000 retained</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <div class="admin-quick-actions">
+        <a href="create-tournament.html" class="qab qab-primary">➕ Create Tournament</a>
+        <a href="admin-tournaments.html" class="qab qab-outline">🏆 Manage Tournaments</a>
+        <a href="admin-users.html" class="qab qab-outline">👥 Manage Users</a>
+        <a href="admin-payments.html" class="qab qab-outline">💸 Payments</a>
+      </div>
+
+      <!-- LIVE TOURNAMENTS -->
+      <div class="admin-section">
+        <div class="admin-section-header">
+          <h2><span class="live-dot"></span> Live Tournaments</h2>
+          <a href="admin-tournaments.html" class="section-link">View All →</a>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>Tournament</th><th>Game</th><th>Players</th><th>Entry</th><th>Prize Pool</th><th>Status</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="at-name">BGMI Solo Showdown</td>
+                <td><span class="game-tag-sm">BGMI</span></td>
+                <td>104/128</td>
+                <td>₹100</td>
+                <td>₹10,000</td>
+                <td><span class="status-live">● Live</span></td>
+                <td class="at-actions"><a href="tournament-detail.html" class="tbl-btn">View</a><button class="tbl-btn tbl-btn-danger">End</button></td>
+              </tr>
+              <tr>
+                <td class="at-name">Chess Blitz Championship</td>
+                <td><span class="game-tag-sm">Chess</span></td>
+                <td>8/8</td>
+                <td>Free</td>
+                <td>₹3,000</td>
+                <td><span class="status-live">● Live</span></td>
+                <td class="at-actions"><a href="tournament-detail.html" class="tbl-btn">View</a><button class="tbl-btn tbl-btn-danger">End</button></td>
+              </tr>
+              <tr>
+                <td class="at-name">FIFA Mobile League</td>
+                <td><span class="game-tag-sm">FIFA</span></td>
+                <td>4/4</td>
+                <td>₹75</td>
+                <td>₹6,000</td>
+                <td><span class="status-live">● Live</span></td>
+                <td class="at-actions"><a href="tournament-detail.html" class="tbl-btn">View</a><button class="tbl-btn tbl-btn-danger">End</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PENDING PAYMENTS -->
+      <div class="admin-section">
+        <div class="admin-section-header">
+          <h2>⚠️ Pending UPI Verifications</h2>
+          <a href="admin-payments.html" class="section-link">View All →</a>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>Player</th><th>Tournament</th><th>Amount</th><th>UPI TxnID</th><th>IGN</th><th>Submitted</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>user_rk123</td>
+                <td>BGMI Solo Showdown</td>
+                <td>₹100</td>
+                <td>4178XXX832</td>
+                <td>ProSniper_RK</td>
+                <td>5 mins ago</td>
+                <td class="at-actions">
+                  <button class="tbl-btn tbl-btn-success">✅ Approve</button>
+                  <button class="tbl-btn tbl-btn-danger">❌ Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>user_flame07</td>
+                <td>BGMI Solo Showdown</td>
+                <td>₹100</td>
+                <td>9234XXX541</td>
+                <td>FlameKing_07</td>
+                <td>12 mins ago</td>
+                <td class="at-actions">
+                  <button class="tbl-btn tbl-btn-success">✅ Approve</button>
+                  <button class="tbl-btn tbl-btn-danger">❌ Reject</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- RECENT REGISTRATIONS -->
+      <div class="admin-section">
+        <div class="admin-section-header">
+          <h2>Recent User Registrations</h2>
+          <a href="admin-users.html" class="section-link">View All →</a>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>Username</th><th>Email</th><th>Joined</th><th>Verified</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>NightHunter_99</td><td>nh99@gmail.com</td><td>2 hrs ago</td><td><span class="verified-badge">✅ Yes</span></td><td><a href="#" class="tbl-btn">View</a></td></tr>
+              <tr><td>DesertEagle_X</td><td>dx@outlook.com</td><td>4 hrs ago</td><td><span class="unverified-badge">❌ No</span></td><td><a href="#" class="tbl-btn">View</a></td></tr>
+              <tr><td>ChessGuru_Delhi</td><td>cgd@yahoo.com</td><td>6 hrs ago</td><td><span class="verified-badge">✅ Yes</span></td><td><a href="#" class="tbl-btn">View</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/global.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

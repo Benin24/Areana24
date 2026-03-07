@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register — Arena 24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-bg">
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+
+  <div class="auth-page">
+
+    <!-- LEFT PANEL -->
+    <div class="auth-left">
+      <a href="index.html" class="nav-logo auth-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <div class="auth-left-content">
+        <h2>Join the Arena</h2>
+        <p>Create your free account and start competing in India's biggest gaming tournaments.</p>
+        <div class="auth-features">
+          <div class="auth-feat"><span>🎯</span> All Games Supported</div>
+          <div class="auth-feat"><span>🆓</span> Free to Register</div>
+          <div class="auth-feat"><span>💰</span> Win Real Prize Money</div>
+          <div class="auth-feat"><span>📱</span> Mobile & PC Games</div>
+        </div>
+      </div>
+      <div class="auth-stats-mini">
+        <div class="asm-item"><span class="asm-num">12,400+</span><span class="asm-label">Players</span></div>
+        <div class="asm-item"><span class="asm-num">₹8.5L+</span><span class="asm-label">Prizes</span></div>
+        <div class="asm-item"><span class="asm-num">340+</span><span class="asm-label">Tournaments</span></div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="auth-right">
+      <div class="auth-card" id="registerCard">
+        <div class="auth-card-header">
+          <h3>Create Your Account</h3>
+          <p>Verified email required to participate in tournaments</p>
+        </div>
+
+        <form class="auth-form" id="registerForm" novalidate>
+
+          <div class="form-row-2">
+            <div class="form-group" id="fg-fname">
+              <label for="fname">First Name</label>
+              <div class="input-wrap">
+                <span class="input-icon">👤</span>
+                <input type="text" id="fname" name="fname" placeholder="First name" required />
+              </div>
+              <span class="field-error" id="err-fname"></span>
+            </div>
+            <div class="form-group" id="fg-lname">
+              <label for="lname">Last Name</label>
+              <div class="input-wrap">
+                <span class="input-icon">👤</span>
+                <input type="text" id="lname" name="lname" placeholder="Last name" required />
+              </div>
+              <span class="field-error" id="err-lname"></span>
+            </div>
+          </div>
+
+          <div class="form-group" id="fg-username">
+            <label for="username">Username / Gaming ID</label>
+            <div class="input-wrap">
+              <span class="input-icon">🎮</span>
+              <input type="text" id="username" name="username" placeholder="e.g. ProSniper_RK" required />
+            </div>
+            <span class="field-hint">This will be your display name on leaderboards</span>
+            <span class="field-error" id="err-username"></span>
+          </div>
+
+          <div class="form-group" id="fg-reg-email">
+            <label for="reg-email">Email Address</label>
+            <div class="input-wrap">
+              <span class="input-icon">✉️</span>
+              <input type="email" id="reg-email" name="email" placeholder="you@example.com" required />
+            </div>
+            <span class="field-hint">A verification link will be sent to this email</span>
+            <span class="field-error" id="err-reg-email"></span>
+          </div>
+
+          <div class="form-group" id="fg-phone">
+            <label for="phone">Phone Number</label>
+            <div class="input-wrap">
+              <span class="input-icon">📱</span>
+              <span class="phone-prefix">+91</span>
+              <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" maxlength="10" required />
+            </div>
+            <span class="field-error" id="err-phone"></span>
+          </div>
+
+          <div class="form-group" id="fg-reg-password">
+            <label for="reg-password">Password</label>
+            <div class="input-wrap">
+              <span class="input-icon">🔒</span>
+              <input type="password" id="reg-password" name="password" placeholder="Min 8 characters" required />
+              <button type="button" class="pw-toggle" id="pwToggleReg">👁</button>
+            </div>
+            <div class="pw-strength" id="pwStrength">
+              <div class="pws-bar"><div class="pws-fill" id="pwsFill"></div></div>
+              <span class="pws-label" id="pwsLabel">Strength: —</span>
+            </div>
+            <span class="field-error" id="err-reg-password"></span>
+          </div>
+
+          <div class="form-group" id="fg-confirm-password">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="input-wrap">
+              <span class="input-icon">🔒</span>
+              <input type="password" id="confirm-password" name="confirm_password" placeholder="Repeat password" required />
+            </div>
+            <span class="field-error" id="err-confirm-password"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="agreeTerms" required />
+              I agree to Arena 24's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </label>
+            <span class="field-error" id="err-terms"></span>
+          </div>
+
+          <!-- SECURITY -->
+          <input type="hidden" name="_csrf" value="csrf-token-here" />
+
+          <button type="submit" class="btn-primary btn-full btn-xl auth-submit" id="registerBtn">
+            <span class="btn-text">Create Account</span>
+            <span class="btn-loader hidden" id="regLoader">⏳</span>
+          </button>
+
+          <p class="auth-switch">Already have an account? <a href="login.html">Login →</a></p>
+        </form>
+      </div>
+
+      <!-- EMAIL VERIFICATION SUCCESS STATE (hidden by default) -->
+      <div class="auth-card verify-card hidden" id="verifyCard">
+        <div class="verify-icon">📬</div>
+        <h3>Check Your Email!</h3>
+        <p>We've sent a verification link to <strong id="sentEmailDisplay">you@example.com</strong>.</p>
+        <p>Click the link in the email to activate your account and start competing.</p>
+        <div class="verify-steps">
+          <div class="vstep"><span>1.</span> Open your email inbox</div>
+          <div class="vstep"><span>2.</span> Click the verification link</div>
+          <div class="vstep"><span>3.</span> You're in — start competing!</div>
+        </div>
+        <button class="btn-outline btn-full" id="resendBtn">Resend Verification Email</button>
+        <a href="login.html" class="btn-ghost btn-full" style="margin-top:12px">Back to Login</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/global.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

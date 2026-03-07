@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BGMI Solo Showdown — Arena 24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/tournament-detail.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <ul class="nav-links">
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="live.html">Live</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-ghost">Login</a>
+        <a href="register.html" class="btn-primary">Register</a>
+      </div>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- TOURNAMENT HERO -->
+  <div class="t-hero" style="background: linear-gradient(135deg, #ff6b00 0%, #ff0040 60%, #1a0a00 100%);">
+    <div class="t-hero-overlay"></div>
+    <div class="container">
+      <div class="t-hero-content">
+        <div class="t-breadcrumb"><a href="tournaments.html">← Tournaments</a> / BGMI Solo Showdown</div>
+        <div class="t-hero-top">
+          <div class="t-hero-icon">🎯</div>
+          <div class="t-hero-info">
+            <div class="t-hero-tags">
+              <span class="tag-game">BGMI</span>
+              <span class="tag-live"><span class="live-dot"></span> LIVE</span>
+              <span class="tag-solo">Solo</span>
+              <span class="tag-mobile">Mobile</span>
+            </div>
+            <h1 class="t-hero-title">BGMI Solo Showdown</h1>
+            <p class="t-hero-desc">India's biggest BGMI solo tournament. Top 10 players share the prize pool. Survive, dominate, and claim glory.</p>
+          </div>
+        </div>
+        <div class="t-hero-stats-bar">
+          <div class="t-hs-item">
+            <span class="t-hs-label">Prize Pool</span>
+            <span class="t-hs-value prize-glow">₹10,000</span>
+          </div>
+          <div class="t-hs-sep"></div>
+          <div class="t-hs-item">
+            <span class="t-hs-label">Entry Fee</span>
+            <span class="t-hs-value">₹100</span>
+          </div>
+          <div class="t-hs-sep"></div>
+          <div class="t-hs-item">
+            <span class="t-hs-label">Players</span>
+            <span class="t-hs-value">104 / 128</span>
+          </div>
+          <div class="t-hs-sep"></div>
+          <div class="t-hs-item">
+            <span class="t-hs-label">Format</span>
+            <span class="t-hs-value">Leaderboard</span>
+          </div>
+          <div class="t-hs-sep"></div>
+          <div class="t-hs-item">
+            <span class="t-hs-label">Platform</span>
+            <span class="t-hs-value">📱 Mobile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="t-detail-layout container">
+
+    <!-- LEFT: MAIN -->
+    <div class="t-detail-main">
+
+      <!-- TABS -->
+      <div class="t-tabs">
+        <button class="t-tab active" data-tab="overview">Overview</button>
+        <button class="t-tab" data-tab="bracket">Leaderboard</button>
+        <button class="t-tab" data-tab="players">Players</button>
+        <button class="t-tab" data-tab="rules">Rules</button>
+        <button class="t-tab" data-tab="prizes">Prizes</button>
+      </div>
+
+      <!-- OVERVIEW TAB -->
+      <div class="t-tab-content active" id="tab-overview">
+        <div class="content-block">
+          <h3>About This Tournament</h3>
+          <p>BGMI Solo Showdown is Arena 24's flagship mobile battle royale tournament. Players compete individually across 4 rounds on Erangel and Miramar maps. Your total kill points and placement points across all rounds decide your rank on the leaderboard.</p>
+          <p>Top 10 players share the ₹10,000 prize pool. Results are posted within 2 hours of each round ending. All disputes are handled by Arena 24 admins.</p>
+        </div>
+        <div class="content-block">
+          <h3>Schedule</h3>
+          <div class="schedule-list">
+            <div class="schedule-item completed">
+              <div class="sch-dot completed-dot"></div>
+              <div class="sch-info">
+                <span class="sch-name">Round 1 — Erangel</span>
+                <span class="sch-time">Dec 22, 2024 · 7:00 PM IST</span>
+              </div>
+              <span class="sch-status completed-badge">Completed</span>
+            </div>
+            <div class="schedule-item live">
+              <div class="sch-dot live-sdot"></div>
+              <div class="sch-info">
+                <span class="sch-name">Round 2 — Miramar</span>
+                <span class="sch-time">Dec 24, 2024 · 7:00 PM IST</span>
+              </div>
+              <span class="sch-status live-badge"><span class="live-dot"></span> Live</span>
+            </div>
+            <div class="schedule-item upcoming">
+              <div class="sch-dot upcoming-dot"></div>
+              <div class="sch-info">
+                <span class="sch-name">Round 3 — Erangel</span>
+                <span class="sch-time">Dec 26, 2024 · 7:00 PM IST</span>
+              </div>
+              <span class="sch-status upcoming-badge">Upcoming</span>
+            </div>
+            <div class="schedule-item upcoming">
+              <div class="sch-dot upcoming-dot"></div>
+              <div class="sch-info">
+                <span class="sch-name">Round 4 — Finals</span>
+                <span class="sch-time">Dec 28, 2024 · 8:00 PM IST</span>
+              </div>
+              <span class="sch-status upcoming-badge">Upcoming</span>
+            </div>
+          </div>
+        </div>
+        <div class="content-block">
+          <h3>Room Details</h3>
+          <div class="room-card">
+            <div class="room-lock">🔒 Room ID and Password will be shared 30 minutes before each round via email and your dashboard.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEADERBOARD TAB -->
+      <div class="t-tab-content" id="tab-bracket">
+        <div class="content-block">
+          <h3>Live Leaderboard — Round 2</h3>
+          <div class="leaderboard-table">
+            <div class="lb-thead">
+              <span>Rank</span><span>Player</span><span>Kills</span><span>Placement Pts</span><span>Total Pts</span>
+            </div>
+            <div class="lb-trow gold-row"><span class="r-badge">1</span><span class="r-player">ProSniper_RK</span><span>24</span><span>48</span><span class="r-total">72</span></div>
+            <div class="lb-trow silver-row"><span class="r-badge">2</span><span class="r-player">HeadshotKing</span><span>19</span><span>45</span><span class="r-total">64</span></div>
+            <div class="lb-trow bronze-row"><span class="r-badge">3</span><span class="r-player">GhostWarrior</span><span>18</span><span>40</span><span class="r-total">58</span></div>
+            <div class="lb-trow"><span class="r-badge">4</span><span class="r-player">NightHunter_99</span><span>15</span><span>38</span><span class="r-total">53</span></div>
+            <div class="lb-trow"><span class="r-badge">5</span><span class="r-player">AimGod_Raj</span><span>14</span><span>36</span><span class="r-total">50</span></div>
+            <div class="lb-trow"><span class="r-badge">6</span><span class="r-player">TacticMaster</span><span>13</span><span>34</span><span class="r-total">47</span></div>
+            <div class="lb-trow"><span class="r-badge">7</span><span class="r-player">FireStorm_Kr</span><span>12</span><span>32</span><span class="r-total">44</span></div>
+            <div class="lb-trow"><span class="r-badge">8</span><span class="r-player">UrbanSoldier</span><span>11</span><span>30</span><span class="r-total">41</span></div>
+            <div class="lb-trow"><span class="r-badge">9</span><span class="r-player">ShadowKill</span><span>10</span><span>28</span><span class="r-total">38</span></div>
+            <div class="lb-trow"><span class="r-badge">10</span><span class="r-player">BattleKing_07</span><span>9</span><span>27</span><span class="r-total">36</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAYERS TAB -->
+      <div class="t-tab-content" id="tab-players">
+        <div class="content-block">
+          <h3>Registered Players (104 / 128)</h3>
+          <div class="players-grid">
+            <div class="player-chip"><span class="pc-avatar">👤</span> ProSniper_RK</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> HeadshotKing</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> GhostWarrior</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> NightHunter_99</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> AimGod_Raj</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> TacticMaster</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> FireStorm_Kr</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> UrbanSoldier</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> ShadowKill</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> BattleKing_07</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> KillSwitch_X</div>
+            <div class="player-chip"><span class="pc-avatar">👤</span> DesertEagle</div>
+            <div class="player-chip empty-slot">+ 92 more</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RULES TAB -->
+      <div class="t-tab-content" id="tab-rules">
+        <div class="content-block">
+          <h3>Tournament Rules</h3>
+          <div class="rules-list">
+            <div class="rule-item"><span class="rule-num">1.</span><span>All players must join the room exactly 10 minutes before match start. Latecomers will be disqualified.</span></div>
+            <div class="rule-item"><span class="rule-num">2.</span><span>Room ID and Password will be shared via email and dashboard 30 mins before match.</span></div>
+            <div class="rule-item"><span class="rule-num">3.</span><span>Emulators are strictly prohibited. Mobile devices only.</span></div>
+            <div class="rule-item"><span class="rule-num">4.</span><span>Hacking, teaming, or any unfair play results in immediate disqualification and account ban.</span></div>
+            <div class="rule-item"><span class="rule-num">5.</span><span>Scoring: +2 pts per kill, placement pts per zone finish.</span></div>
+            <div class="rule-item"><span class="rule-num">6.</span><span>Results are final. Screenshots of rank screen must be submitted within 15 mins after match.</span></div>
+            <div class="rule-item"><span class="rule-num">7.</span><span>Prize money transferred via UPI within 48 hours of tournament completion.</span></div>
+            <div class="rule-item"><span class="rule-num">8.</span><span>Arena 24 admin decisions are final in all disputes.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRIZES TAB -->
+      <div class="t-tab-content" id="tab-prizes">
+        <div class="content-block">
+          <h3>Prize Distribution</h3>
+          <div class="prize-table">
+            <div class="pt-row pt-header"><span>Position</span><span>Prize</span><span>% of Pool</span></div>
+            <div class="pt-row gold-row"><span>🥇 1st Place</span><span>₹4,000</span><span>40%</span></div>
+            <div class="pt-row silver-row"><span>🥈 2nd Place</span><span>₹2,500</span><span>25%</span></div>
+            <div class="pt-row bronze-row"><span>🥉 3rd Place</span><span>₹1,500</span><span>15%</span></div>
+            <div class="pt-row"><span>4th Place</span><span>₹800</span><span>8%</span></div>
+            <div class="pt-row"><span>5th Place</span><span>₹500</span><span>5%</span></div>
+            <div class="pt-row"><span>6th – 10th Place</span><span>₹140 each</span><span>7%</span></div>
+          </div>
+          <p class="prize-note">* All prizes transferred via UPI within 48 hours of final round completion.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: JOIN CARD -->
+    <div class="t-detail-sidebar">
+      <div class="join-card">
+        <div class="join-header">
+          <span class="live-dot"></span> Registration Open
+        </div>
+        <div class="join-slots">
+          <div class="slots-bar">
+            <div class="slots-fill" style="width:81%"></div>
+          </div>
+          <div class="slots-text"><strong>24 slots left</strong> out of 128</div>
+        </div>
+        <div class="join-details">
+          <div class="jd-row"><span>Entry Fee</span><span class="jd-val">₹100</span></div>
+          <div class="jd-row"><span>Prize Pool</span><span class="jd-val prize-col">₹10,000</span></div>
+          <div class="jd-row"><span>Format</span><span class="jd-val">Leaderboard</span></div>
+          <div class="jd-row"><span>Platform</span><span class="jd-val">Mobile</span></div>
+          <div class="jd-row"><span>Game</span><span class="jd-val">BGMI</span></div>
+          <div class="jd-row"><span>Type</span><span class="jd-val">Solo</span></div>
+        </div>
+        <button class="btn-primary btn-full btn-xl join-btn" id="joinBtn">Join Tournament — ₹100</button>
+        <p class="join-note">Pay via UPI. Slot confirmed on payment.</p>
+
+        <!-- UPI PAYMENT MODAL TRIGGER -->
+        <div class="upi-info">
+          <span>💳 Accepted: GPay, PhonePe, Paytm, BHIM</span>
+        </div>
+      </div>
+
+      <!-- ORGANIZER CARD -->
+      <div class="organizer-card">
+        <h4>Organized by</h4>
+        <div class="org-info">
+          <div class="org-avatar">A24</div>
+          <div>
+            <div class="org-name">Arena 24 Admin</div>
+            <div class="org-badge">✅ Verified Organizer</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHARE -->
+      <div class="share-card">
+        <h4>Share Tournament</h4>
+        <div class="share-btns">
+          <button class="share-btn">WhatsApp</button>
+          <button class="share-btn">Telegram</button>
+          <button class="share-btn" id="copyLink">Copy Link</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JOIN MODAL -->
+  <div class="modal-overlay" id="joinModal">
+    <div class="modal">
+      <button class="modal-close" id="closeModal">✕</button>
+      <div class="modal-header">
+        <h3>Join BGMI Solo Showdown</h3>
+        <p>Complete payment to confirm your slot</p>
+      </div>
+      <div class="modal-body">
+        <div class="upi-amount">
+          <span class="upi-label">Amount to Pay</span>
+          <span class="upi-value">₹100</span>
+        </div>
+        <div class="upi-qr-placeholder">
+          <div class="qr-box">
+            <div class="qr-placeholder-text">QR Code<br/>arena24@upi</div>
+          </div>
+          <p>Scan QR or pay to <strong>arena24@upi</strong></p>
+        </div>
+        <div class="upi-form">
+          <label>Enter your UPI Transaction ID after payment</label>
+          <input type="text" placeholder="e.g. 4178XXX832XXXXXXX" class="upi-input" id="upiTxnId"/>
+          <label>Your In-Game Name (IGN)</label>
+          <input type="text" placeholder="Your BGMI username" class="upi-input" id="ignInput"/>
+          <button class="btn-primary btn-full" id="confirmJoin">Confirm Registration</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+          <p>India's premier gaming tournament platform.</p>
+        </div>
+        <div class="footer-col"><h4>Platform</h4><a href="tournaments.html">Tournaments</a><a href="leaderboard.html">Leaderboard</a><a href="live.html">Live Games</a></div>
+        <div class="footer-col"><h4>Account</h4><a href="login.html">Login</a><a href="register.html">Register</a></div>
+        <div class="footer-col"><h4>Support</h4><a href="#">Contact</a><a href="#">FAQs</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2024 Arena 24. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/tournament-detail.js"></script>
+</body>
+</html>

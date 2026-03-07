@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Tournaments — Arena 24 Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <nav class="navbar admin-nav" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-a">A</span>RENA<span class="logo-24">24</span></a>
+      <div class="admin-nav-badge">⚙️ Admin Panel</div>
+      <div class="nav-actions"><div class="nav-avatar">👤 Admin</div><a href="login.html" class="btn-ghost">Logout</a></div>
+    </div>
+  </nav>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-title">Admin Menu</div>
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sn-item"><span>🏠</span> Dashboard</a>
+        <a href="admin-tournaments.html" class="sn-item active"><span>🏆</span> Tournaments</a>
+        <a href="admin-users.html" class="sn-item"><span>👥</span> Users</a>
+        <a href="admin-payments.html" class="sn-item"><span>💸</span> Payments</a>
+        <div class="sn-divider"></div>
+        <a href="create-tournament.html" class="sn-item sn-highlight"><span>➕</span> New Tournament</a>
+        <a href="index.html" class="sn-item"><span>🌐</span> View Site</a>
+        <a href="login.html" class="sn-item sn-logout"><span>🚪</span> Logout</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-page-header">
+        <h1>Manage Tournaments</h1>
+        <a href="create-tournament.html" class="btn-primary">➕ Create New Tournament</a>
+      </div>
+
+      <!-- FILTER ROW -->
+      <div class="admin-filter-row">
+        <div class="filter-search">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search tournament..." id="adminTSearch"/>
+        </div>
+        <select class="filter-select"><option>All Games</option><option>BGMI</option><option>Free Fire</option><option>Valorant</option><option>Chess</option></select>
+        <select class="filter-select"><option>All Status</option><option>Live</option><option>Registration Open</option><option>Upcoming</option><option>Completed</option></select>
+      </div>
+
+      <!-- TOURNAMENTS TABLE -->
+      <div class="admin-section">
+        <div class="admin-table-wrap">
+          <table class="admin-table admin-t-table">
+            <thead>
+              <tr>
+                <th>Tournament</th><th>Game</th><th>Format</th><th>Type</th>
+                <th>Players</th><th>Entry</th><th>Prize</th><th>Status</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminTBody">
+              <tr>
+                <td class="at-name">BGMI Solo Showdown</td>
+                <td><span class="game-tag-sm">BGMI</span></td>
+                <td>Leaderboard</td><td>Solo</td><td>104/128</td><td>₹100</td><td>₹10,000</td>
+                <td><span class="status-live">● Live</span></td>
+                <td class="at-actions">
+                  <a href="tournament-detail.html" class="tbl-btn">View</a>
+                  <button class="tbl-btn tbl-btn-edit" onclick="openEditModal('BGMI Solo Showdown')">Edit</button>
+                  <button class="tbl-btn tbl-btn-danger" onclick="confirmEnd('BGMI Solo Showdown')">End</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="at-name">Valorant 5v5 Clash</td>
+                <td><span class="game-tag-sm">Valorant</span></td>
+                <td>Bracket</td><td>Team</td><td>12/16</td><td>₹500/team</td><td>₹25,000</td>
+                <td><span class="status-reg">● Registration</span></td>
+                <td class="at-actions">
+                  <a href="tournament-detail.html" class="tbl-btn">View</a>
+                  <button class="tbl-btn tbl-btn-edit">Edit</button>
+                  <button class="tbl-btn tbl-btn-danger">Cancel</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="at-name">Free Fire Squad Cup</td>
+                <td><span class="game-tag-sm">Free Fire</span></td>
+                <td>Round Robin</td><td>Team</td><td>28/32</td><td>Free</td><td>₹8,000</td>
+                <td><span class="status-reg">● Registration</span></td>
+                <td class="at-actions">
+                  <a href="tournament-detail.html" class="tbl-btn">View</a>
+                  <button class="tbl-btn tbl-btn-edit">Edit</button>
+                  <button class="tbl-btn tbl-btn-danger">Cancel</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="at-name">Chess Blitz Championship</td>
+                <td><span class="game-tag-sm">Chess</span></td>
+                <td>Round Robin</td><td>Solo</td><td>76/100</td><td>Free</td><td>₹3,000</td>
+                <td><span class="status-live">● Live</span></td>
+                <td class="at-actions">
+                  <a href="tournament-detail.html" class="tbl-btn">View</a>
+                  <button class="tbl-btn tbl-btn-edit">Edit</button>
+                  <button class="tbl-btn tbl-btn-danger">End</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="at-name">BGMI Squad War</td>
+                <td><span class="game-tag-sm">BGMI</span></td>
+                <td>Bracket</td><td>Team</td><td>6/32</td><td>₹1,000/team</td><td>₹50,000</td>
+                <td><span class="status-upcoming">● Upcoming</span></td>
+                <td class="at-actions">
+                  <a href="tournament-detail.html" class="tbl-btn">View</a>
+                  <button class="tbl-btn tbl-btn-edit">Edit</button>
+                  <button class="tbl-btn tbl-btn-danger">Cancel</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="at-name">Ludo King Weekly Open</td>
+                <td><span class="game-tag-sm">Ludo King</span></td>
+                <td>Leaderboard</td><td>Solo</td><td>500/500</td><td>Free</td><td>₹2,000</td>
+                <td><span class="status-done">✅ Completed</span></td>
+                <td class="at-actions">
+                  <a href="tournament-detail.html" class="tbl-btn">View Results</a>
+                  <button class="tbl-btn">Pay Prizes</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn page-next">Next →</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- EDIT MODAL -->
+  <div class="modal-overlay hidden" id="editTModal">
+    <div class="modal modal-large">
+      <button class="modal-close" id="closeEditTModal">✕</button>
+      <div class="modal-header"><h3>Edit Tournament</h3></div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Tournament Name</label>
+          <input type="text" class="upi-input" id="editTName" value="BGMI Solo Showdown"/>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label>Max Players</label>
+            <input type="number" class="upi-input" value="128"/>
+          </div>
+          <div class="form-group">
+            <label>Prize Pool (₹)</label>
+            <input type="number" class="upi-input" value="10000"/>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label>Entry Fee (₹, 0 = Free)</label>
+            <input type="number" class="upi-input" value="100"/>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select class="filter-select" style="width:100%">
+              <option>Registration Open</option>
+              <option selected>Live</option>
+              <option>Upcoming</option>
+              <option>Completed</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Room ID (share with players)</label>
+          <input type="text" class="upi-input" placeholder="e.g. 123456"/>
+        </div>
+        <div class="form-group">
+          <label>Room Password</label>
+          <input type="text" class="upi-input" placeholder="e.g. arena24"/>
+        </div>
+        <div class="form-row-inline">
+          <button class="btn-primary">Save Changes</button>
+          <button class="btn-outline" id="cancelEditT">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/global.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
